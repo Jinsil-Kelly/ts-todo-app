@@ -1,17 +1,17 @@
-import React, {useCallback} from 'react';
+import React, { useCallback } from 'react';
 // @ts-ignore
-import {List} from 'react-virtualized';
+import { List } from 'react-virtualized';
 import TodoListItem from './TodoListItem';
-import {Todo} from '../modules/todos/types';
+import { Todo } from '../modules/todos/types';
 
 type TodoListProps = {
   todos: Todo[];
   onToggle: (id: number) => void;
   onRemove: (id: number) => void;
 };
-const TodoList = ({todos, onToggle, onRemove}: TodoListProps) => {
+const TodoList = ({ todos, onToggle, onRemove }: TodoListProps) => {
   const rowRenderer = useCallback(
-    ({index, key, style}) => {
+    ({ index, key, style }) => {
       const todo = todos[index];
       return (
         <TodoListItem
@@ -35,7 +35,7 @@ const TodoList = ({todos, onToggle, onRemove}: TodoListProps) => {
           className="TodoList"
           rowHeight={57}
           list={todos}
-          style={{outline: 'none'}}
+          style={{ outline: 'none' }}
           rowRenderer={rowRenderer}
         />
       )}

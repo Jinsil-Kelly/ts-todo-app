@@ -1,12 +1,12 @@
 import React, {
   ChangeEvent, FormEvent, useCallback, useState,
 } from 'react';
-import {MdAdd} from 'react-icons/md';
+import { MdAdd } from 'react-icons/md';
 
 type TodoInsertProps = {
   onInsert: (text: string) => void;
 };
-const TodoInsert = ({onInsert}: TodoInsertProps) => {
+const TodoInsert = ({ onInsert }: TodoInsertProps) => {
   const [value, setValue] = useState('');
 
   const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -32,7 +32,7 @@ const TodoInsert = ({onInsert}: TodoInsertProps) => {
         onChange={onChange}
       />
       <button type="submit" data-testid="addTodoBtn">
-        <MdAdd/>
+        <MdAdd />
       </button>
     </form>
   );

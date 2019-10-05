@@ -1,4 +1,4 @@
-import {createStandardAction} from 'typesafe-actions';
+import { createStandardAction } from 'typesafe-actions';
 
 // 액션 type
 export const INSERT = 'reducer/INSERT'; // 새로운 todo 를 등록함

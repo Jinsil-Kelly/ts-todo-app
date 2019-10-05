@@ -3,7 +3,7 @@ import './styles/main.scss';
 import TodoApp from './components/TodoApp';
 
 const App = () => (
-  <TodoApp/>
+  <TodoApp />
 );
 
 export default App;
